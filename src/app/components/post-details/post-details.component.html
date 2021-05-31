@@ -1,0 +1,19 @@
+<div class="postDetailContainer">
+    <h1>{{post.title}}</h1>
+    <p>created: {{post.created}}</p>
+    <p>Modified: {{post.modified}}</p>
+
+    <hr>
+
+    <p>{{post.content}}</p>
+
+    <hr>
+
+    <h3>Add a comment!</h3>
+    <app-add-comment [post]="post"></app-add-comment>
+    <hr>
+
+    <h3>Comments: </h3>
+    
+    <app-comment *ngFor="let c of post.comments" [comment]="c"></app-comment>
+</div>
