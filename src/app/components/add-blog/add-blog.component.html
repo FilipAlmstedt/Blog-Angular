@@ -1,10 +1,15 @@
-<div>
+<div class="addBlogContainer">
     <form [formGroup]="addBlogForm" (ngSubmit)="addNewBlog()">
-        <label for="title">Title of Blog: </label>
-        <input id="title" placeholder="Title of Blog" type="text" formControlName="title" required/>
-        <div *ngIf="title.invalid">
-            <div>Title is required!</div>
+
+        <div class="addTitleDiv">
+            <label for="title">Title of Blog: </label>
+            <input id="title" placeholder="Title of Blog" type="text" formControlName="title" required/>
+
+            <div *ngIf="title.invalid" class="test">
+                <div>Title is required!</div>
+            </div>
         </div>
+
         <button type="submit" [disabled]="addBlogForm.invalid">Create new Blog</button>
     </form>
 </div>

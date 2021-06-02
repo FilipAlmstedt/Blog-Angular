@@ -31,7 +31,7 @@ export class PostDetailsComponent implements OnInit {
 
       this.commentService.getComments(this.post);
 
-    });
+    });    
     
   }
 

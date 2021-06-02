@@ -1,10 +1,10 @@
 <div class="postContainer">
     <div class="showPostInfo" (click)="showPostDetails()">
-        <p>{{post.title}}</p>
+        <h3>{{post.title}}</h3>
         <p>Created: {{post.created}}</p>
         <p>Total comments: {{post.comments.length}}</p>
     </div>
-    <div>
+    <div class="updateDeleteButtonsDiv">
         <button (click)="deletePost()">Delete Post</button>
         <button (click)="redirectToUpdatePost()">Update Post</button>
     </div>

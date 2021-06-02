@@ -9,8 +9,4 @@ describe('CommentService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(CommentService);
   });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
 });

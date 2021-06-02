@@ -57,10 +57,10 @@ export class PostsService {
   }
 
   // Add post in DB
-  addPost(blogId: number, title: string, content: string): Observable<Post> {
+  addPost(blogId: number, title: string, content: string,): Observable<Post> {
     
     // The api only allows the id 0 because it seems to take care of itself so this one is for the POST request
-    const newPost: Post = {id: 0, title: title, content: content, created: new Date(), modified: new Date(), blogId: blogId , comments: []};
+    const newPost: Post = {id: 0, title: title, content: content, created: new Date(), modified: new Date(), blogId: blogId, comments: []};
     return this.http.post<Post>('https://mi-blogs.azurewebsites.net/api/Posts', newPost);
 
   }

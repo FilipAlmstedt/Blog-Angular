@@ -1,6 +1,11 @@
 .blogContainer{
+    padding: 3%; 
+    border: 1px solid black;
     .showBlogInfo {
+        padding: 3%;
         cursor: pointer;
-        border: 1px solid black;
+    }
+    .updateDeleteButtonsDiv {
+        padding-left: 3%;
     }
 }
