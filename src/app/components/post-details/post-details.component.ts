@@ -33,6 +33,9 @@ export class PostDetailsComponent implements OnInit {
 
     });    
     
+    console.log("Comments in", this.post.title, ":", this.post.comments);
+    
+
   }
 
 }
