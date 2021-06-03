@@ -1,27 +1,38 @@
 <div class="updatedPostContainer">
-    <h3>Update post: {{post.title}}</h3>
-    <form [formGroup]="updatePostForm" (ngSubmit)="updatePost()">
-        <div class="updatedPostTitle">
-            <label for="title">Title of Post: </label>
-            <input id="title" placeholder="Title of new post" type="text" formControlName="title" required/>
 
-            <!--Validation div-->
-            <div *ngIf="title.invalid">
-                <div>Title is required!</div>
+    <div class="updateFormDiv">
+
+        <h1>Update post: {{post.title}}</h1>
+
+        <hr class="line">
+
+        <form [formGroup]="updatePostForm" (ngSubmit)="updatePost()">
+
+            <div class="updatedPostTitle">
+                <label for="title" class="titleLabel">Title of Post: </label>
+                <input id="title" placeholder="{{post.title}}" type="text" formControlName="title" required/>
+
+                <!--Validation div-->
+                <div *ngIf="title.invalid">
+                    <div class="warningText">Title is required!</div>
+                </div>
+
+            </div>
+            <div class="updatedPostContent">
+                <label for="content" class="contentLabel">Content:</label>
+                <textarea id="content" placeholder="{{post.content}}" formControlName="content" required></textarea>
+
+                <!--Validation div-->
+                <div *ngIf="content.invalid">
+                    <div class="warningText">Content is required!</div>
+                </div>
+
             </div>
 
-        </div>
-        <div class="updatedPostContent">
-            <label for="content">Content:</label>
-            <textarea id="content" placeholder="Insert content here..." formControlName="content" required></textarea>
+            <button type="submit" [disabled]="updatePostForm.invalid">Create new Post</button>
 
-            <!--Validation div-->
-            <div *ngIf="content.invalid">
-                <div>Content is required!</div>
-            </div>
+        </form>    
 
-        </div>
+    </div>
 
-        <button type="submit" [disabled]="updatePostForm.invalid">Create new Post</button>
-    </form>    
 </div>

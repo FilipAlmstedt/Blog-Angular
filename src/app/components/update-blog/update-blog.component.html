@@ -1,12 +1,27 @@
-<div>
-    <h3>Update blog: {{blog.title}}</h3>
-    <form [formGroup]="updateBlogForm" (ngSubmit)="updateBlog()">
-        <label for="title">Title of Blog: </label>
-        <input id="title" placeholder="{{blog.title}}" type="text" formControlName="title" required />
-        <div *ngIf="title.invalid">
-            <div>Title is required!</div>
-        </div>
-        <button type="submit" [disabled]="updateBlogForm.invalid">Create new Blog</button>
-    </form>
+<div class="updateBlog">
+
+    <div class="updateBlogForm">
+
+        <h3>Update blog: {{blog.title}}</h3>
+
+        <hr class="line">
+
+        <form [formGroup]="updateBlogForm" (ngSubmit)="updateBlog()">
+            
+            <div class="addTitleDiv">
+                <label for="title">Title of Blog: </label>
+                <input id="title" placeholder="{{blog.title}}" type="text" formControlName="title" required/>
+
+                <div *ngIf="title.invalid" class="test">
+                    <div>Title is required!</div>
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="updateBlogForm.invalid">Create new Blog</button>
+        </form>
+
+    </div>
+
+
 </div>
 

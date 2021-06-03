@@ -1,8 +1,14 @@
 <div class="postContainer">
     <div class="showPostInfo" (click)="showPostDetails()">
-        <h3>{{post.title}}</h3>
-        <p>Created: {{post.created}}</p>
-        <p>Total comments: {{post.comments.length}}</p>
+
+        <div class="title">
+            <h3>{{post.title}}</h3>
+        </div>
+
+        <div class="dates">
+            <p><i class="far fa-calendar-alt"></i> Created: {{post.created | date: 'longDate' }}</p>
+            <p><i class="far fa-comments"></i> Total comments: {{post.comments.length}}</p>
+        </div>
     </div>
     <div class="updateDeleteButtonsDiv">
         <button (click)="deletePost()">Delete Post</button>

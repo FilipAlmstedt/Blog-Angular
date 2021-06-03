@@ -1,12 +1,23 @@
 <div class="blogDetailsContainer">
-    <h1>{{blog.title}}</h1>
-    <p>Created: {{blog.created}}</p>
 
-    <hr>
-    <h3>Add a post: </h3>
-    <app-add-post [blog]="blog"></app-add-post>
+    <div class="showTitle">
+        <h1>{{blog.title}}</h1>
+        <a routerLink="../../"><i class="fas fa-backward"></i> Go back to startpage!</a>
+    </div>
+    
+    <div class="showCreatedDate">
+        <p><i class="far fa-calendar-alt"></i> Created: {{blog.created | date:'medium' }}</p>
+    </div>
 
-    <hr>
+    <hr class="line">
+
+    <div class="addPost">
+        <h3>Add a post: </h3>
+        <app-add-post [blog]="blog"></app-add-post>
+    </div>
+
+    <hr class="line">
+
     <div class="posts">
         <h3>Made Posts: </h3>
         <app-post *ngFor="let p of blog.posts" [post]="p"></app-post>

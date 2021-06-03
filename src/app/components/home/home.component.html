@@ -1,2 +1,21 @@
-<app-add-blog [blogs]="blogs"></app-add-blog>
-<app-blog *ngFor="let b of blogs" [blog]="b"></app-blog>
+<div class="homeComponent">
+    
+    <div class="welcomeInfoDiv">
+        <h1>Welcome to my blog</h1>
+        <p>Feel free to create a new blog!</p>
+    </div>
+
+    <hr class="line">
+
+    <div class="addBlog">
+        <h3>Add new blog!</h3>
+        <app-add-blog [blogs]="blogs"></app-add-blog>
+    </div>
+
+    <hr class="line">
+
+    <div class="blogs">
+        <h3>Made Blogs: </h3>
+        <app-blog *ngFor="let b of blogs" [blog]="b"></app-blog>
+    </div>
+</div>

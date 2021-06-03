@@ -1,3 +1,48 @@
 .blogDetailsContainer {
     padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .showTitle {
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .showCreatedDate {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 2%;
+        
+        p{
+            margin: 10px;
+        }
+    }
+
+    .addPost {
+        padding: 2%;
+        
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.7em;
+        }
+    }
+
+    .line {
+        border-top: 2px solid red;
+        width: 60vw;
+    }
+
+    .posts {
+        margin-top: 3%;
+        width: 60vw;
+    }
 }

@@ -1,2 +1,32 @@
+.homeComponent {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .welcomeInfoDiv {
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 2%;
+        }
+    }
+
+    .line {
+        border-top: 2px solid red;
+        width: 60vw;
+    }
+
+    .addBlog {
+        margin-top: 2%;
+    }
+
+    .blogs {
+        margin-top: 2%;
+        width: 60vw;
+    }
+}
 

@@ -38,7 +38,7 @@ export class AddPostComponent implements OnInit {
       this.postId = this.blog.posts[this.blog.posts.length-1].id++;
     }
 
-    this.service.addPost(this.blog.id, this.addPostForm.value.title, this.addPostForm.value.content).subscribe((responseData) => {
+    this.service.addPost(this.blog.id, this.addPostForm.value.title, this.addPostForm.value.content, this.blog).subscribe((responseData) => {
       console.log('Added new Post in Blog: ' , responseData.title , ' BlogID:', responseData.blogId);
 
       let blogs: Blog[] = JSON.parse(localStorage.getItem('blogs'));

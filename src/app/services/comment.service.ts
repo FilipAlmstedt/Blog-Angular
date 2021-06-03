@@ -30,13 +30,13 @@ export class CommentService {
   
   }
 
-  addComment(postId: number, title: string, content: string, post: Post): Observable<Comment> {
+  addComment(postId: number, content: string, post: Post): Observable<Comment> {
 
      /*
       The api only allows the id 0 because it seems to take care of itself so this one is for the POST request,
       the api didn't allow me to send in an object with the "real" id.
     */
-    const newComment: Comment = {id: 0, title: title, content: content, postId: postId, post: post};
+    const newComment: Comment = {id: 0, content: content, postId: postId, post: post};
     return this.http.post<Comment>('https://mi-blogs.azurewebsites.net/api/Comments', newComment);
 
   }

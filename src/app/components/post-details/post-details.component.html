@@ -1,21 +1,35 @@
 <div class="postDetailContainer">
-    <h1>{{post.title}}</h1>
-    <p>created: {{post.created}}</p>
-    <p>Modified: {{post.modified}}</p>
 
-    <hr>
+    <div class="postTitleDiv">
+        <h1>{{post.title}}</h1>
+        <p> BlogID: {{post.blogId}}</p>
+        <a routerLink="../../Blog/{{post.blogId}}"><i class="fas fa-backward"></i> Go back to blog!</a>
+    </div>
+
+    <div class="postDates">
+        <p><i class="far fa-calendar-alt"></i> Created: {{post.created | date:'medium'}}</p>
+        <p><i class="far fa-calendar-alt"></i> Modified: {{post.modified | date:'medium'}}</p>
+    </div>
+
+    <hr class="line">
 
     <div class="postContent">
         <p>{{post.content}}</p>
     </div>
 
-    <hr>
+    <hr class="line">
 
-    <h3>Add a comment!</h3>
-    <app-add-comment [post]="post"></app-add-comment>
-    <hr>
+    <div class="addComment">
+        <h3>Add a comment!</h3>
+        <app-add-comment [post]="post"></app-add-comment>
+    </div>
 
-    <h3>Comments: </h3>
-    
-    <app-comment *ngFor="let c of post.comments" [comment]="c"></app-comment>
+    <hr class="line">
+
+    <div class="showComments">
+        <h3>Comments: </h3>
+        <app-comment *ngFor="let c of post.comments" [comment]="c"></app-comment>
+    </div>
+
+
 </div>

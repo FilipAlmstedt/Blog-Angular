@@ -31,7 +31,12 @@ export class PostComponent implements OnInit {
       // Find the right blog located in localStorage by looping through blog array and comparing blogID:s  
       for(let i=0; i<blogs.length; i++) {
         if(blogs[i].id == this.post.blogId) {
-          blogs[i].posts.splice(i,1);
+          for(let j=0; j<blogs[i].posts.length; j++) {
+            if(blogs[i].posts[j].id == this.post.id) {
+              console.log("Deleted post:",blogs[i].posts[j].title);
+              blogs[i].posts.splice(j,1);
+            }
+          }
         }
       }
   

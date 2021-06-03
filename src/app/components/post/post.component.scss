@@ -1,11 +1,23 @@
 .postContainer {
 
-    border: 1px solid black;
+    border: 5px solid black;
     padding: 3%; 
 
     .showPostInfo {
         padding: 3%;
         cursor: pointer;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .dates {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 50px;
+        }
+
     }
 
     .updateDeleteButtonsDiv {

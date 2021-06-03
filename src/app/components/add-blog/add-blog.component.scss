@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 20vh;
 
     margin: 2%;
 
@@ -13,9 +14,24 @@
         margin-bottom: 3%;
 
         input {
-            margin-top: 6%;
+            margin-top: 2%;
+            margin-bottom: 6%;
+
+            width: 400px;
+            height: 50px;
+        }
+
+        .titleLabel {
+            font-weight: bold;
+            font-style: italic;
+        }
+        .warningText {
+            color: #eb605e;
+            font-weight: bold;
         }
     }
+
+    
 }
 
 .ng-valid[required], .ng-valid.required  {
