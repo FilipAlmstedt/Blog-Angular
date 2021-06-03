@@ -2,6 +2,7 @@
 
     border: 5px solid black;
     padding: 3%; 
+    transition: border .5s ease-in-out;
 
     .showPostInfo {
         padding: 3%;
@@ -23,4 +24,9 @@
     .updateDeleteButtonsDiv {
         padding-left: 3%;
     }
+}
+
+.postContainer:hover {
+    border: 5px solid red;
+    transition: border .5s ease-in-out;
 }

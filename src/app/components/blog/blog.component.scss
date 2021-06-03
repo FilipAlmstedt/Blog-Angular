@@ -1,7 +1,8 @@
-.blogContainer{
+.blogContainer {
     padding: 3%; 
     border: 5px solid black;
-
+    transition: border .5s ease-in-out;
+    
     .showBlogInfo {
         padding: 3%;
         cursor: pointer;
@@ -21,4 +22,9 @@
     .updateDeleteButtonsDiv {
         padding-left: 3%;
     }
+}
+
+.blogContainer:hover {
+    border: 5px solid red;
+    transition: border .5s ease-in-out;
 }

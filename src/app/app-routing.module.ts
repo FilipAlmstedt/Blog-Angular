@@ -9,12 +9,35 @@ import { UpdatePostComponent } from './components/update-post/update-post.compon
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'Blog/:id', component: BlogDetailsComponent },
-  { path: 'Post/:id', component: PostDetailsComponent },
-  { path: 'Update-Blog/:id', component: UpdateBlogComponent },
-  { path: 'Update-Post/:id', component: UpdatePostComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    component: HomeComponent, 
+    data: { animation: 'HomePage' } 
+  },
+  { 
+    path: 'Blog/:id',
+    component: BlogDetailsComponent,
+    data: { animation: 'BlogDetailsPage' }
+  },
+  { 
+    path: 'Post/:id', 
+    component: PostDetailsComponent, 
+    data: { animation: 'PostDetailsPage' }
+  },
+  { 
+    path: 'Update-Blog/:id', 
+    component: UpdateBlogComponent, 
+    data: { animation: 'UpdateBlogPage' }  
+  },
+  { 
+    path: 'Update-Post/:id', 
+    component: UpdatePostComponent, 
+    data: { animation: 'UpdatePostPage' }  
+  },
+  { 
+    path: '**', 
+    component: PageNotFoundComponent 
+  }
 ];
 
 @NgModule({

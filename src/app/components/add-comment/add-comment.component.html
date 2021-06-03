@@ -1,12 +1,12 @@
 <div class="addCommentContainer">
     <form [formGroup]="addCommentForm" (ngSubmit)="addNewComment()">
         <div class="addCommentContent">
-            <label for="content">Content:</label>
+            <label for="content" class="contentLabel">Content:</label>
             <textarea id="content" placeholder="Insert comment content here..." formControlName="content" required></textarea>
 
             <!--Validation div-->
             <div *ngIf="content.invalid">
-                <div>Content is required!</div>
+                <div class="warningText">Content is required!</div>
             </div>
 
         </div>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
@@ -34,7 +35,7 @@ import { UpdatePostComponent } from './components/update-post/update-post.compon
     UpdateBlogComponent,
     UpdatePostComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
