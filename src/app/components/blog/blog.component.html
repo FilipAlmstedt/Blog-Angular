@@ -1,12 +1,18 @@
 <div class="blogContainer">
     <div class="showBlogInfo"  (click)="showBlogDetails()">
-        <h2>{{blog.title}}</h2>
-        <p>Created: {{blog.created}}</p>
-        <p>Total posts: {{blog.posts.length}}</p>
+
+        <div class="title">
+            <h2>{{blog.title}}</h2>
+        </div>
+
+        <div class="dates">
+            <p><i class="far fa-calendar-alt"></i> Created: {{blog.created | date: 'longDate' }}</p>
+            <p><i class="fas fa-pencil-alt"></i> Total posts: {{blog.posts.length}}</p>
+        </div>
+
     </div>
-    <div>
-        <button (click)="deleteBlog()">Delete Blog!</button>
-        <button (click)="redirectToUpdateBlog()">Update Blog</button>
+    <div class="updateDeleteButtonsDiv">
+        <button (click)="deleteBlog()" class="btn-flip" data-back='blog' data-front="Delete"></button>
+        <button (click)="redirectToUpdateBlog()" class="btn-flip" data-back='blog' data-front="Edit"></button>
     </div>
-    <hr>
 </div>

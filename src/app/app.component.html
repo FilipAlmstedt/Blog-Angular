@@ -2,14 +2,14 @@
 <nav>
     <ul>
         <li>
-            <h1><a routerLink="/">Filips Blog</a></h1>
+            <h1><a routerLink="/" >Filips Blog</a></h1>
         </li>
         <li>
-            <a routerLink="/">Home</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fas fa-home"></i> Home</a>
         </li>
     </ul>
 </nav>
 
-<br>
-<hr>
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>

@@ -1,20 +1,33 @@
-* {
-    padding: 0;
-    margin: 0;
+nav {
+    color:white;
+    background-color: black;
+    padding: 2%;
+    ul {
 
-    nav {
-        color:white;
-        background-color: black;
-        padding: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        list-style-type: none;
+
+
         li {
-            display: inline-block;
             
             margin-left: 10px;
             margin-right: 50px;
             a {
                 text-decoration: none;
                 color: white;
+                transition: color .5s ease-in-out;
             }
+            a:hover {
+                transition: color .5s ease-in-out;
+                color: #a94442;
+            }
+        }
+
+        .active {
+            color: lightgreen;
         }
     }
 }

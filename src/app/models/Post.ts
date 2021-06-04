@@ -1,3 +1,4 @@
+import { Blog } from "./Blog";
 import { Comment } from "./Comment";
 
 export class Post {
@@ -9,6 +10,7 @@ export class Post {
         public created: Date, //date-time
         public modified: Date, //date-time
         public blogId: number,
+        public blog: Blog,
         public comments: Comment[],
                
     ) {}

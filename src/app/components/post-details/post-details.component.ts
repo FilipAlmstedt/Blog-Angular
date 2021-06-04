@@ -31,8 +31,11 @@ export class PostDetailsComponent implements OnInit {
 
       this.commentService.getComments(this.post);
 
-    });
+    });    
     
+    console.log("Comments in", this.post.title, ":", this.post.comments);
+    
+
   }
 
 }

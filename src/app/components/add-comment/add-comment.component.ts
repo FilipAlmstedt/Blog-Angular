@@ -16,7 +16,6 @@ export class AddCommentComponent implements OnInit {
   commentId: number = 0;
 
   addCommentForm = this.fb.group({
-    title: ['', [Validators.required]],
     content: ['', [Validators.required]]
   });
 
@@ -25,10 +24,7 @@ export class AddCommentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Get funtions to be used for validation
-  get title() {
-    return this.addCommentForm.get('title');
-  }
+  // Get function to be used for validation
   get content() {
     return this.addCommentForm.get('content');
   }
@@ -38,9 +34,9 @@ export class AddCommentComponent implements OnInit {
       this.commentId = this.post.comments[this.post.comments.length-1].id++;
     }
 
-    this.commentService.addComment(this.post.id, this.addCommentForm.value.title, this.addCommentForm.value.content, this.post).subscribe((responseData) => {
+    this.commentService.addComment(this.post.id, this.addCommentForm.value.content, this.post).subscribe((responseData) => {
       
-      console.log("New comment", responseData.title ,"was added!");
+      console.log("New comment was added!");
 
       let blogs: Blog[] = JSON.parse(localStorage.getItem('blogs'));
 

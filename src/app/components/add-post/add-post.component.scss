@@ -1,23 +1,69 @@
 .addPostContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     .addPostTitle {
-        margin: 3%;
         display: flex;
         flex-direction: column;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        
+        input {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            
+            padding: 2%;
+            border-radius: 10px;
+            height: 35px;
+        }
+
+        .titleLabel {
+            font-weight: bold;
+            font-style: italic;
+        }
     }
+
+    .warningText {
+        color: #eb605e;
+        font-weight: bold;
+    }
+
     .addPostContent {
-        margin: 3%;
+        margin-top: 3%;
+        margin-bottom: 3%;
         display: flex;
         flex-direction: column;
         width: 300px;
        
+        .contentLabel {
+            font-weight: bold;
+            font-style: italic;
+        }
+
         textarea {
             height: 250px;
+            margin-bottom: 3%;
+            padding: 5%;
+            border-radius: 10%;
         }
+    }
+
+    /* 
+        Wanted to style button more but the colors masks the buttons so it looks like to you can
+        click but you can't
+    */ 
+    .submitBtn {
+        padding: 1%;
+        font-family: 'Open Sans';
+        cursor: pointer;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .submitBtn:hover {
+        background-color: #42A948;
+        transition: background-color .2s ease-in-out;
     }
 }
 

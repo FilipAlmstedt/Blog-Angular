@@ -1,2 +1,71 @@
+.homeComponent {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .welcomeInfoDiv {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 2%;
+        }
+        p {
+            line-height: 1.7em;
+        }
+    }
+
+    .line {
+        border-top: 2px solid red;
+        width: 90vw;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    .addBlog {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .blogs {
+        margin-top: 7%;
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homeComponent {
+
+        justify-content: center;
+
+        .welcomeInfoDiv {
+            text-align: left;
+    
+            h1 {
+                font-size: 60px;
+                margin-bottom: 2%;
+            }
+            p {
+                line-height: 1.7em;
+            }
+        }
+    
+        .line {
+            border-top: 2px solid red;
+            width: 60vw;
+            margin-bottom: 0%;
+            margin-top: 0%;
+        }
+    
+        .blogs {
+            margin-bottom: 2%;
+            width: 60vw;
+        }
+    }
+
+}
 

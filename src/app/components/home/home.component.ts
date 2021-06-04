@@ -17,11 +17,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.service.blogs$.subscribe((data) => {
       this.blogs = data;
-
-      console.log('Blogs in LS: ', this.blogs);
-      
     });
 
+    console.log('Blogs in LS: ', this.blogs);
     this.service.getBlogs();
   }
 

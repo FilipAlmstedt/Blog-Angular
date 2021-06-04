@@ -1,26 +1,26 @@
 <div class="addPostContainer">
     <form [formGroup]="addPostForm" (ngSubmit)="addNewPost()">
         <div class="addPostTitle">
-            <label for="title">Title of Post: </label>
+            <label for="title" class="titleLabel">Title of Post: </label>
             <input id="title" placeholder="Title of new post" type="text" formControlName="title" required/>
 
             <!--Validation div-->
             <div *ngIf="title.invalid">
-                <div>Title is required!</div>
+                <div class="warningText">Title is required!</div>
             </div>
 
         </div>
         <div class="addPostContent">
-            <label for="content">Content:</label>
+            <label for="content" class="contentLabel">Content:</label>
             <textarea id="content" placeholder="Insert content here..." formControlName="content" required></textarea>
 
             <!--Validation div-->
             <div *ngIf="content.invalid">
-                <div>Content is required!</div>
+                <div class="warningText">Content is required!</div>
             </div>
 
         </div>
 
-        <button type="submit" [disabled]="addPostForm.invalid">Create new Post</button>
+        <button type="submit" [disabled]="addPostForm.invalid" class="submitBtn">Create new Post</button>
     </form>    
 </div>
