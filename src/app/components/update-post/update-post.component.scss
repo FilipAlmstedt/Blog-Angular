@@ -9,7 +9,7 @@
     margin-top: 3%;
 
     h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .updateFormDiv {
@@ -20,9 +20,9 @@
         justify-content: center;
         align-items: center;
 
-        width: 30vw;
+        width: 90vw;
 
-        padding: 5%;
+        padding: 2.5%;
 
         .updatedPostTitle {
             margin-top: 3%;
@@ -90,5 +90,24 @@
 
 .ng-invalid:not(form)  {
     border-left: 5px solid #a94442; /* red */
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .updatedPostContainer {
+    
+        h1 {
+            font-size: 35px;
+        }
+
+        .updateFormDiv {
+
+            width: 30vw;
+
+            padding: 5%;
+
+        }
+    }
 }
   

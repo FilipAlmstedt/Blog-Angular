@@ -32,7 +32,7 @@
         justify-content: flex-start;
         padding: 2%;
         
-        p{
+        p { 
             margin: 10px;
         }
     }
@@ -51,11 +51,25 @@
 
     .line {
         border-top: 2px solid red;
-        width: 60vw;
+        width: 90vw;
     }
 
     .posts {
         margin-top: 3%;
-        width: 60vw;
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .blogDetailsContainer {
+        
+        .line {
+            width: 60vw;
+        }
+
+        .posts {
+            margin-top: 3%;
+            width: 60vw;
+        }
     }
 }

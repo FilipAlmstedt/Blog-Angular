@@ -9,12 +9,12 @@
         <form [formGroup]="updateBlogForm" (ngSubmit)="updateBlog()">
             
             <div class="addTitleDiv">
-                <label for="title">Title of Blog: </label>
+                <label for="title" class="titleLabel">Title of Blog: </label>
                 <input id="title" placeholder="{{blog.title}}" type="text" formControlName="title" required/>
 
                 <!--Validation div-->
                 <div *ngIf="title.invalid" class="test">
-                    <div>Title is required!</div>
+                    <div class="warningText">Title is required!</div>
                 </div>
             </div>
 

@@ -37,7 +37,23 @@ const routes: Routes = [
   { 
     path: '**', 
     component: PageNotFoundComponent 
-  }
+  },
+  { 
+    path: 'Blog/**',
+    component: PageNotFoundComponent 
+  },
+  { 
+    path: 'Post/**', 
+    component: PageNotFoundComponent 
+  },
+  { 
+    path: 'Update-Blog/**', 
+    component: PageNotFoundComponent 
+  },
+  { 
+    path: 'Update-Post/**', 
+    component: PageNotFoundComponent 
+  },
 ];
 
 @NgModule({

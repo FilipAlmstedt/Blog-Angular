@@ -1,4 +1,5 @@
 .addBlogContainer {
+
     padding: 1%;
 
     display: flex;
@@ -13,6 +14,10 @@
         padding: 2%;
         margin-bottom: 3%;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
         input {
             margin-top: 2%;
             margin-bottom: 6%;
@@ -20,8 +25,8 @@
             padding: 2%;
             border-radius: 10px;
 
-            width: 400px;
-            height: 50px;
+            width: 70vw;
+            height: 5vh;
         }
 
         .titleLabel {
@@ -34,7 +39,32 @@
         }
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .addBlogContainer {
     
+        .addTitleDiv {
+            padding: 2%;
+            margin-bottom: 3%;
+    
+            input {
+               
+                width: 20vw;
+                height: 5vh;
+            }
+    
+            .titleLabel {
+                font-weight: bold;
+                font-style: italic;
+            }
+            .warningText {
+                color: #eb605e;
+                font-weight: bold;
+            }
+        }
+    
+    }
 }
 
 .ng-valid[required], .ng-valid.required  {

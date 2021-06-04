@@ -8,6 +8,7 @@
     .welcomeInfoDiv {
         margin-top: 2%;
         margin-bottom: 2%;
+        text-align: center;
 
         h1 {
             font-size: 60px;
@@ -20,7 +21,7 @@
 
     .line {
         border-top: 2px solid red;
-        width: 60vw;
+        width: 90vw;
     }
 
     .addBlog {
@@ -29,7 +30,34 @@
 
     .blogs {
         margin-top: 2%;
-        width: 60vw;
+        width: 100vw;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .homeComponent {
+
+        .welcomeInfoDiv {
+            text-align: left;
+    
+            h1 {
+                font-size: 60px;
+                margin-bottom: 2%;
+            }
+            p {
+                line-height: 1.7em;
+            }
+        }
+    
+        .line {
+            border-top: 2px solid red;
+            width: 60vw;
+        }
+    
+        .blogs {
+            width: 60vw;
+        }
+    }
+
 }
 
