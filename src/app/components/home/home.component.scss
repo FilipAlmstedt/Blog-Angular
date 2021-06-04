@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
 
     .welcomeInfoDiv {
         margin-top: 2%;
@@ -23,14 +22,17 @@
     .line {
         border-top: 2px solid red;
         width: 90vw;
+        margin-top: 7%;
+        margin-bottom: 7%;
     }
 
     .addBlog {
         margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     .blogs {
-        margin-top: 2%;
+        margin-top: 7%;
         width: 100vw;
     }
 }
@@ -55,9 +57,12 @@
         .line {
             border-top: 2px solid red;
             width: 60vw;
+            margin-bottom: 0%;
+            margin-top: 0%;
         }
     
         .blogs {
+            margin-bottom: 2%;
             width: 60vw;
         }
     }
