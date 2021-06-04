@@ -1,5 +1,14 @@
-import { animate, animateChild, group, query, style, transition, trigger } from "@angular/animations";
+import { 
+  animate, 
+  animateChild, 
+  group, 
+  query, 
+  style, 
+  transition, 
+  trigger 
+} from "@angular/animations";
 
+// Animation that slides in the component from left to right
 export const slideInAnimation =
   trigger('routeAnimations', [
     transition('* <=> *', [

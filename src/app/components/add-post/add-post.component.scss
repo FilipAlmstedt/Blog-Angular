@@ -49,6 +49,22 @@
             border-radius: 10%;
         }
     }
+
+    /* 
+        Wanted to style button more but the colors masks the buttons so it looks like to you can
+        click but you can't
+    */ 
+    .submitBtn {
+        padding: 1%;
+        font-family: 'Open Sans';
+        cursor: pointer;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .submitBtn:hover {
+        background-color: #42A948;
+        transition: background-color .2s ease-in-out;
+    }
 }
 
 .ng-valid[required], .ng-valid.required  {

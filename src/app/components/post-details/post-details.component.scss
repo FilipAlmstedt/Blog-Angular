@@ -7,9 +7,11 @@
     align-items: center;
 
     .postTitleDiv {
+        text-align: center;
         h1 {
             font-size: 60px;
             margin-bottom: 10px;
+            
         }
 
         p {
@@ -73,6 +75,10 @@
 
 @media screen and (min-width: 1024px) {    
     .postDetailContainer {
+
+        .postTitleDiv {
+            text-align: left;
+        }
 
         .postDates {
 

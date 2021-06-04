@@ -2,8 +2,8 @@
 
     <div class="updateBlogForm">
 
-        <h3>Update blog: {{blog.title}}</h3>
-
+        <h3>Edit blog: {{blog.title}}</h3>
+        <a routerLink="../../"><i class="fas fa-backward"></i> Go back!</a>
         <hr class="line">
 
         <form [formGroup]="updateBlogForm" (ngSubmit)="updateBlog()">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <button type="submit" [disabled]="updateBlogForm.invalid">Create new Blog</button>
+            <button type="submit" [disabled]="updateBlogForm.invalid" class="submitBtn">Edit blog</button>
         </form>
 
     </div>
