@@ -12,6 +12,8 @@ export class BlogsService {
   private blogs = new Subject<Blog[]>();
   blogs$ = this.blogs.asObservable();
 
+  private userId: number = 2021525;
+
   constructor(private http: HttpClient) { }
 
   /*
@@ -22,7 +24,7 @@ export class BlogsService {
 
     if(!localStorage.getItem('blogs')) {
       this.http.
-      get<Blog[]>('https://mi-blogs.azurewebsites.net/api/Blogs/user/2021525')
+      get<Blog[]>('https://mi-blogs.azurewebsites.net/api/Blogs/user/'+ this.userId)
       .subscribe((allBlogs) => {
         this.blogs.next(allBlogs);
 
