@@ -12,6 +12,8 @@ export class BlogsService {
   private blogs = new Subject<Blog[]>();
   blogs$ = this.blogs.asObservable();
 
+  private userId: number = 2021525;
+
   constructor(private http: HttpClient) { }
 
   /*
@@ -22,7 +24,7 @@ export class BlogsService {
 
     if(!localStorage.getItem('blogs')) {
       this.http.
-      get<Blog[]>('https://mi-blogs.azurewebsites.net/api/Blogs/user/2021525')
+      get<Blog[]>('https://mi-blogs.azurewebsites.net/api/Blogs/user/'+ this.userId)
       .subscribe((allBlogs) => {
         this.blogs.next(allBlogs);
 
@@ -47,7 +49,7 @@ export class BlogsService {
   addBlog(title: string): Observable<Blog> {
 
     // The api only allows the id 0 because it seems to take care of itself so this one is for the POST request
-    const newBlog: Blog = {id: 0, title: title, created: new Date(), userId: 2021525, posts: []}
+    const newBlog: Blog = {id: 0, title: title, created: new Date(), userId: this.userId, posts: []}
     return this.http.post<Blog>('https://mi-blogs.azurewebsites.net/api/Blogs', newBlog);
 
   }
