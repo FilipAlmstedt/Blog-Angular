@@ -49,7 +49,7 @@ export class BlogsService {
   addBlog(title: string): Observable<Blog> {
 
     // The api only allows the id 0 because it seems to take care of itself so this one is for the POST request
-    const newBlog: Blog = {id: 0, title: title, created: new Date(), userId: 2021525, posts: []}
+    const newBlog: Blog = {id: 0, title: title, created: new Date(), userId: this.userId, posts: []}
     return this.http.post<Blog>('https://mi-blogs.azurewebsites.net/api/Blogs', newBlog);
 
   }
