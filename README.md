@@ -18,6 +18,8 @@ This was my first project built in Angular. Hopefully you enjoy it :D!
 - The user can edit a blog
 - The user can delete a blog
 
+
+
 - The user can add a new post 
 - The user can edit a post 
 - The user can delete a post
